@@ -1,0 +1,207 @@
+#iniciotabstextagenda{
+    padding-top: 60px;
+    /*font-family: cursive;*/
+    font-size: 18px;
+    /*text-align: center;*/
+}
+
+div.item-media img{
+    width: 30px;
+    height: 30px;
+    
+}
+
+/*div.buttons-row a{*/
+    /*background-color:;*/
+    color: white;
+/*}*/
+
+
+
+div.picker-footer a{
+    /*display: none;*/
+    
+}
+
+div.picker-header{
+    display: none;
+}
+
+div.picker-modal picker-calendar picker-modal-inline{
+  
+}
+
+div.modal-title{
+    text-align: center;
+}
+/*fondo de modal agregar evento*/
+div.modal.modal-in{
+ 
+}
+
+
+div.subnavbar{
+background-color: #2196F3;
+border-color: white;
+    
+}
+
+div.picker-modal-overlay.modal-overlay-visible{
+    display: none;
+}
+
+#imglist:hover,#imgsearch:hover,#imgadd:hover,#imgmenu:hover{
+   /* width: 70px;
+    height: 74px;*/
+    background-color: #6DA9D8;
+}
+
+div.ripple-wave{
+    display: none;
+    
+}
+
+
+#butoncalendario{
+    padding-top: 30px;
+}
+
+div #cajafechaseleccalendario{
+    align-content: center;
+}
+
+div.modal-buttons.modal-buttons-3.modal-buttons-vertical span.modal-button{
+    text-align: center;
+    color: black;
+}
+
+#bloquetab2{
+    padding-top: 70px;
+}
+
+#contaniopestanacal{
+    text-align: center;
+    font-size: 30px;
+}
+
+/*tab 2 calendario*/
+#contenedorcalendario{
+    margin-top: auto;
+    margin-right: -17px;
+    margin-left: -17px;
+    
+}
+
+a.button.close-picker{
+   // display: none;
+}
+
+div.picker-calendar-week-days{
+  
+}
+
+#contenedorcalendario div #calendar-inline-container div div.picker-footer{
+    display: none;
+}
+
+#contenedorcalendario div #calendar-inline-container{
+    height: 277px;
+}
+
+div #calendarioeventospage.page-content{
+ /* overflow-y: hidden;*/
+}
+
+div.subnavbar{
+    
+}
+
+div #calendar-default{  
+     
+     text-align: center;
+     /*font-family: cursive;*/
+}
+/*seleccion de dia*/
+div.picker-modal-inner span{
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+/*Barra de calendario*/
+div.toolbar.calendar-custom-toolbar{
+   /* background-color: ;*/
+}
+
+#Eventosdeldia{
+    /*font-family: fantasy;*/
+}
+
+
+#calendar-inline-container{
+
+    
+}
+div.swipeout-content.item-content{
+   
+    
+}
+#calendar-inline-container div div div div div div div span{
+   
+}
+
+/*botones de las pestañas*/
+a.button.tab-link{
+    background-color: #2196F3;
+}
+
+div#iniciotabstabs.subnavbar{
+    background-color: #2196F3;
+}
+div.buttons-row{
+    background-color: #2196F3;
+    border-color: white;
+}
+
+#listatareascalendario{
+  margin-top: 0px;    
+  width: 360px;
+  /*margin-left: -15px;*/
+  
+}
+
+div#scrolllistacalendario{
+    margin-top: -30px; 
+    margin-left: -15px;
+    width:360px;
+    height:260px;
+    overflow-y:scroll;
+}
+
+div.preloader-indicator-modal{
+    background:rgba(33,150,243,1);
+}
+
+/*Scroll de la lista tareas en pestaña calendario*/
+div #listatareas{
+    padding-top: 65px;
+    margin-left: -15px;
+    margin-right: -15px;
+    /*overflow: scroll;*/
+    /*overflow-y:scroll;*/
+    /*  overflow-y:scroll;*/
+      
+}
+
+div#listaagenda{
+  /*  overflow-y:scroll;*/
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+
+
+
+
+

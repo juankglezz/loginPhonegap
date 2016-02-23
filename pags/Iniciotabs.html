@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#AAAAAF">
+    <title>Admix Team</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    
+      
+      
+  </head>
+  <body>
+       <!-- Views -->
+    <div class="views">
+      <div class="view tabs-views">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="iniciotabs" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                  <div class="left">Admix Team</div>
+                  <div class="center"></div>
+                  <!--<div  class="right"><a id='users' align="center" href="pags/usuarios.html"><img  src="img/listausers.png"></a></div>-->
+                  <!--<div class="right"><a href="pags/buscareventos.html"><img id="imgsearch" src="img/searchmdpi.png"></a></div>-->
+                  <!--<div class="right"><a class="open-vertical-modal" align="center" href="pags/agregarnuevoregistro.html"><img id="imgadd" src="img/add.png"></a></div>-->
+                  <div class="right"><a class="open-vertical-modal" align="center" href=""><img id="imgadd" src="img/add.png"></a></div>
+                  <div class="right"><a href="pags/settings.html" ><img id="imgmenu" src="img/config.png"></a></div>
+              </div>
+            <div id="iniciotabstabs" class="subnavbar">
+              <div class="buttons-row">
+                <a id="tabagenda" href="#tab1" class="button tab-link active">INICIO</a>
+                <a href="#tab2" class="button tab-link">CALENDARIO</a>
+                <a href="#tab3" class="button tab-link">TAREAS</a>
+                
+              </div>
+            </div> 
+             
+                  
+            </div>
+              
+            <!-- Scrollable page content Aqui va el contenido de la pag -->
+            
+           
+              <!-- Click <a href="#detailsPage">here</a> to go to page 2-->
+
+<div class="tabs-swipeable-wrap">  
+<div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+        <div id="pulltorefresh" class="page-content pull-to-refresh-content">
+          <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+              <div class="content-block-title">Arraste hacia abajo para Actualizar</div>
+          </div>
+                  <div id="bloquecontenidoagenda" class="content-block">
+                      <!--Aqui va el contenido de la agenda del dia-->  
+
+                            <div id="iniciotabstextagenda"><p id="textagendadeldia">Agenda del Dia:</p></div>  
+                              <div class="content-block-title">Mi Agenda</div>
+                                 
+
+                              <div id="listaagenda" class="list-block">
+                                  <ul id="contagenda">
+
+                                  </ul>
+                              </div>
+                                <!--<div class="content-block-title">Full Layout 2</div> 
+                                <div id="listaagenda" class="list-block">
+                                  <ul id="contschedule">
+                                  </ul>
+                              </div>-->
+                   </div>
+            </div> 
+        </div>
+            <!-- Tab 2 -->
+            <div id="tab2" class="tab">
+              <div id="bloquetab2" class="content-block">
+                
+                
+                <!--<div id="butoncalendario"><a href="pags/calendarioeventos.html" class="button active">Revisar Calendario de Eventos</a></div>--> 
+                  
+                  
+                  
+                  
+                  <div class="content-block" id="contenedorcalendario">
+                          <div style="padding:0; margin-right:-15px; width:auto" class="content-block-inner">
+                            <div id="calendar-inline-container"  ></div>
+                          </div>
+                        </div> 
+                
+                        <div id="diaselectcalendario" class="list-block">
+                         <ul>
+                             <li>
+                                  <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                                        <div class="item-inner">
+                                          <div class="item-title label">Eventos del dia:</div>
+                                          <div class="item-input">
+                                            <input type="text" placeholder="FechaSelec" readonly id="calendar-default">
+                                          </div>
+                                        </div>
+                                  </div> 
+                             </li>
+                        </ul>        
+                       </div> 
+                        
+                        <!-- Se utiliza el contenedor de los eventos-->
+                      <div id="scrolllistacalendario">
+                          <div id="listatareascalendario" class="list-block">
+                              <ul id="contcaleventos">
+                              </ul>
+                         </div> 
+                      </div>    
+                    
+              </div>         
+            </div>
+                <!-- Tab 3 -->
+                <div id="tab3" class="tab">
+                   <div id="pulltorefresh" class="page-content pull-to-refresh-content">
+                      <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                      </div> 
+                  <div id="bloquecontenidotareas" class="content-block">
+                    <!-- Contenido de la lista Tareas-->
+                      <div id="contenedorlistatareas">
+                      <div id="listatareas" class="list-block">
+                          <ul id="contlista">
+                            <!--<li class="swipeout">
+                              <div class="swipeout-content item-content">
+                                    <div class="item-media"><img src="img/classic_watch.png"></div>
+                                    <div class="item-inner"><div class="item-title">Terminar detalles de Proyecto</div></div>
+                              </div>
+                                  <div class="swipeout-actions-right">
+                                    <a href="#" class="action1 bg-red">Eliminar</a>
+                                  </div>
+                            </li> --> 
+
+                          </ul>
+                      </div> 
+                      </div>      
+                  </div>
+                   </div> 
+                </div>
+          </div>
+                </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+     
+    <script type="text/javascript" src="../js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../js/tabs.js"></script>
+  </body>
+</html> 

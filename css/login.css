@@ -1,0 +1,40 @@
+#logincontent{
+  /*background: #B92929;*/
+ /* padding-left: 30px;
+  padding-right: 30px;*/
+}
+
+#loginimage{
+    height: 50px;
+    height: 50px;
+    
+}
+
+#loginusuario,#logincontra{
+    background-color: white;
+    text-align: center;
+}
+
+#logintextrememberpass{
+    
+    color: black;
+    font-size: 12px;
+}
+/*#butregistrardisp{
+    color: white;
+    background-color: #3E0E0B;
+    
+}*/
+#loginbutton{
+    /*color: white;*/
+    /*background-color: #3E0E0B;*/
+    
+}
+#remember-me{
+    background-color: aqua;
+}
+#remember-me{
+    
+}
+
+

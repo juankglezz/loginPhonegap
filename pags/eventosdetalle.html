@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#1F06FF">
+    <!-- Your app title -->
+    <title>Admix Team</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/detalleeventos.css">
+      
+      
+  </head>
+  <body>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view eventosdetalle">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="eventosdetalle" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"><a href="" class="show-tab-3"><img src="img/ic_back.png"></a></div>
+                <div class="center">Detalle</div>
+                  <div class="right"><a id="editarev" href="pags/actualizarregistro.html"><img id="imgedit" src="img/ic_menu_edit.png"></a></div>  
+                  
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content Aqui va el contenido de la pag -->
+             <div id="#" class="page-content">
+           
+                 <div class="content-block-title">Detalles del Evento:</div>
+                <!-- "inset" class on list-block -->
+                <div class="list-block inset">
+                  <ul>
+                        <!-- Text inputs -->
+                        <li>
+                          <div class="item-content" >
+                            <div class="item-media"><i class="icon"><img src="img/infotitle.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Descripcion:</div>
+                              <div class="item-input" >
+                                <input id="cajanombreevento" type="text" placeholder="Nombre del Evento"  readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="itemcliente">
+                          <div class="item-content" >
+                            <div class="item-media"><i class="icon"><img src="img/client.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Cliente:</div>
+                              <div class="item-input" >
+                                  <textarea id="cajacliente" type="text" placeholder="Cliente"  readonly></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="prioridadtarea">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/Prioridad.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Prioridad:</div>
+                              <div class="item-input">
+                                <input id="cajaprioridad" type="text" placeholder="" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/estado.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Estado de Evento:</div>
+                              <div class="item-input">
+                                <input id="cajaestadoevento" type="text" placeholder="" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li> 
+                      
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/tipoevento.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Tipo Evento:</div>
+                              <div class="item-input">
+                                <input id="cajatipoevento" type="text" placeholder="Cita o Tarea" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/notasgray.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Notas Inicio:</div>
+                              <div class="item-input">
+                                  <textarea id="cajanotasinicio" placeholder="Notas" readonly></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                       <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/notasgray.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Notas Finales:</div>
+                              <div class="item-input">
+                                  <textarea id="cajanotasfin" placeholder="Notas Finales" readonly></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li id="fechainicioitem">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/fechas.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Fecha_Inicio:</div>
+                              <div class="item-input">
+                                <input id="cajafechainicio" type="text" placeholder="" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="fechalimiteitem">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/fechas.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Fecha Limite:</div>
+                              <div class="item-input">
+                                <input id="cajafechalimite" type="text" placeholder="" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="fechafinitem">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/fechas.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Fecha Fin:</div>
+                              <div class="item-input">
+                                <input id="cajafechafin" type="text" placeholder="" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                       
+                      <li id="evtodoeldia">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/fullday.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Evento de todo el dia:</div>
+                              <div class="item-input">
+                                <input id="cajatodoeldia" type="text" placeholder="Si o No" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li id="evlugar">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src="img/place.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Lugar:</div>
+                              <div class="item-input">
+                                <input id="cajalugar" type="text" placeholder="Lugar" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon"><img src='img/tags.png'></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Tags:</div>
+                              <div class="item-input">
+                                <input id="cajatags" type="text" placeholder="Tags" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li id="participantedelevento">
+                          <div class="item-content" >
+                            <div class="item-media"><i class="icon"><img src="img/eventowner.png"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Participante:</div>
+                              <div class="item-input" >
+                                  <input id="cajaparticipante" type="text" placeholder="Participante"  readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="botoncancelandfinish">
+                            <p  class="buttons-row">
+                              <a id="botoncancelar" href="#" class="button button-big button-fill button-raised color-red">Cancelar Evento</a>
+                              <a id="botonterminar" href="#" class="button button-big button-fill button-raised color-teal">Terminar</a>
+                            </p>  
+                        </li>
+                      
+                    </ul>  
+                </div> 
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>         

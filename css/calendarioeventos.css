@@ -1,0 +1,46 @@
+/*#contenedorcalendario{
+   margin-top: auto;
+}
+
+a.button.close-picker{
+   // display: none;
+}
+
+div.picker-calendar-week-days{
+  
+}
+
+#contenedorcalendario div #calendar-inline-container div div.picker-footer{
+    display: none;
+}
+
+#contenedorcalendario div #calendar-inline-container{
+    height: 180px;
+}
+
+div #calendarioeventospage.page-content{
+ /* overflow-y: hidden;*/
+//}
+
+/*div.subnavbar{
+    
+}
+
+div #calendar-default{    
+     text-align: center;
+}
+/*seleccion de dia*/
+/*div.picker-modal-inner span{
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+/*Barra de calendario*/
+/*div.toolbar.calendar-custom-toolbar{
+    background-color: #27457B;
+}
+
+#Eventosdeldia{
+    font-family: fantasy;
+}*/

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#1F06FF">
+    <!-- Your app title -->
+    <title>Admix Team</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view registrar-dispotivo">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="registrardisp" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Registrar Dispositivo</div>
+                  <div class="left">Atras</div>
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content Aqui va el contenido de la pag -->
+            <div id="contenpaginicio" class="page-content">
+           
+              <div id="textRegDisp">
+                 <p align="center">
+                    <font>Introduzca por favor sus Credenciales para registrar este dispositivo</font>  
+                 </p> 
+             </div>
+              <form>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">User:</div>
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="Username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Password:</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Password">
+                      </div>
+                    </div>
+                 
+                </ul>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <a href="pags/Iniciotabs.html" class="item-link list-button">Registrar Dispositivo</a>
+                  </li>
+                </ul>          
+              </div>
+                  
+            </form> 
+           <!-- Link to another page -->
+              <a href="pags/about.html">about app</a>
+          
+        <p><a href="pags/registrardispcad.html" class="button active">Quiero Registrarme usando una cadena de confianza</a </p>
+            <p><a href="#" class="button active">Términos de Uso</a></p>
+           
+      </div>
+   
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>         

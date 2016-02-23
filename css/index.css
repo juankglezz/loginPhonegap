@@ -1,0 +1,37 @@
+#logoadmix{
+  text-align: center;
+}
+
+
+#indexpage-content{
+    /*
+    background-color:#B92929;*/
+    /* padding-left: 30px;
+    padding-right: 30px;*/
+    /*background-image: url("img/splash/320x426.png"); */
+}
+
+#textindexbienv{
+    font-size: 25px;
+    color: white;
+}
+#indexabout{
+    color: white;
+}
+#indexbutyasoyuser{
+    background-color: azure;
+
+}
+#indexbutnuevouser{
+    background-color: azure;
+}
+div.navbar{
+    background-color: #2196F3;
+}
+#bodyindex{
+    /*background-image: url("img/splash/team640x960.png");*/
+}
+
+body {
+    background:url(../img/splash/TEAM360x640.png);
+}

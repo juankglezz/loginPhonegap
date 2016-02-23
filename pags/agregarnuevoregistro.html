@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#1F06FF">
+    <!-- Your app title -->
+    <title>Admix Team</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/agregarreg.css"> 
+  </head>
+  <body>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view agregarnuevoregistro">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="agregarnuevoregistro" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"><a href="pags/Iniciotabs.html"><img src="img/ic_back.png"></a></div>
+                <div class="center">Evento</div>  
+                <div class="right"><img id="imgsave" src="img/ic_save.png"></div>
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content Aqui va el contenido de la pag -->
+             <div id="agregarregcontent" class="page-content">
+             <div class="content-block-title">Formulario de Evento</div>
+                    <div id="formagreevento" class="list-block">
+                      <ul>
+                        <!-- Titulo inputs -->
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Titulo:</div>
+                              <div class="item-input">
+                                <input id="inputagreg" type="text" placeholder="El titulo">
+                              </div>
+                            </div>
+                          </div>       
+                        </li>
+                        <!-- Tarea radio input -->
+                        <li>
+                          <label id="regradiotarea" class="label-radio item-content">
+                            <input id="radiotarea" type="radio" name="my-radio" value=1  >
+                            <div class="item-media">
+                              <i class="icon icon-form-radio"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Tarea</div>
+                            </div>
+                          </label>
+                        </li>   
+                        <!-- RadioButton Cita seleccionada por default -->  
+                        <li>
+                          <label id="regradiocita" class="label-radio item-content">
+                            <!-- Cita Checked by default -->
+                            <input id="radiocita" type="radio" name="my-radio" value=2  >
+                            <div class="item-media">
+                              <i class="icon icon-form-radio"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Cita</div>
+                            </div>
+                          </label>
+                        </li>
+                        
+                          <li id="smartselectclients">
+                           <div class="content-block-title">Desea Agregar una Cita con un  Cliente?</div> 
+                           <a href="#" class="item-link smart-select">
+                            <!-- "multiple" attribute for multiple select-->
+                            <select id="selectcliente" name="Clientes" multiple maxlength="1">
+                                <optgroup id="optiongroupclient" label="Clientes">
+                                    
+                                </optgroup>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Clientes</div>
+                              </div>
+                            </div>
+                           </a>    
+                        </li>
+                        
+                        <!-- Proyecto radio input -->
+                        <!--<li>
+                          <label class="label-radio item-content">
+                            <input id="radioproyecto" type="radio" name="my-radio" value=3>
+                            <div class="item-media">
+                              <i class="icon icon-form-radio"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Proyecto</div>
+                            </div>
+                          </label>
+                        </li> --> 
+                        <!-- Notas inputs -->  
+                        <li class="align-top">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Notas</div>
+                              <div class="item-input">
+                                  <textarea id="NotasI"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li> 
+                        <!-- Notas Finales inputs -->  
+                        <li id="NotasFinales" class="align-top">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Notas Finales</div>
+                              <div class="item-input">
+                                  <textarea id="NotasF"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="diacompletocheck">
+                          <label  class="label-checkbox item-content">
+                            <input  id="checkboxFullDay" type="checkbox" name="my-checkbox">
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Dia Completo</div>
+                            </div>
+                          </label>
+                       </li>
+                         <li id="Picker-DepFI">
+                          <div class="content-block-title">Fecha Inicio:</div>
+                            <div class="list-block">
+                             <ul>
+                               <li>
+                                 <div class="item-content">
+                                   <div class="item-inner">
+                                     <div class="item-input">
+                                       <input type="text" placeholder="" readonly id="picker-dependentFI">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
+                             </ul>
+                            </div>
+                          </li>
+                          <li id="Picker-DepFF">
+                          <div class="content-block-title">Fecha Fin:</div>
+                            <div class="list-block">
+                             <ul>
+                               <li>
+                                 <div class="item-content">
+                                   <div class="item-inner">
+                                     <div class="item-input">
+                                       <input type="text" placeholder="" readonly id="picker-dependentFF">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
+                             </ul>
+                            </div>
+                          </li >
+                          <li id="Picker-DepFL">
+                          <div class="content-block-title">Fecha Limite:</div>
+                            <div class="list-block">
+                             <ul>
+                               <li>
+                                 <div class="item-content">
+                                   <div class="item-inner">
+                                     <div class="item-input">
+                                       <input type="text" placeholder="" readonly id="picker-dependentFL">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
+                             </ul>
+                            </div>
+                          </li>
+                        <!-- Calendario Fecha Inicio y Hora inputs -->  
+                         <!--<li id="itemfechainicio">
+                        <div  class="content-block-title">Fecha Inicio</div>
+                            <div class="list-block ">
+                              <ul>
+                                <li>
+                                  <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                                    <div class="item-inner">
+                                      <div class="item-input">
+                                        <input id="calendariofechainicio" type="text" placeholder="Selecciona la fecha" readonly >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                 <li>
+                                    <div id="selechorainicio" class="content-block-title">Selecciona la hora de inicio</div>
+                                        <div id="listblockhorai" class="list-block">
+                                          <ul>
+                                            <li>
+                                              <div class="item-content">
+                                                <div class="item-inner">
+                                                  <div class="item-input">
+                                                    <input type="text" placeholder="Hora inicio" readonly id="horainicio">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                        </div>  
+                                </li>  
+                              </ul>
+                            </div>    
+                        </li>-->
+                        <!-- Calendario Fecha Fin y Hora inputs -->    
+                         <!--<li id="fechafinnuevoreg">
+                        <div class="content-block-title">Fecha Fin</div>
+                            <div class="list-block">
+                              <ul>
+                                <li>
+                                  <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                                    <div class="item-inner">
+                                      <div class="item-input">
+                                        <input type="text" placeholder="Selecciona la fecha" readonly id="calendariofechafin">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div id="selechorafin" class="content-block-title">Selecciona la hora de fin</div>
+                                        <div id="listblockhoraf" class="list-block">
+                                          <ul>
+                                            <li>
+                                              <div class="item-content">
+                                                <div class="item-inner">
+                                                  <div class="item-input">
+                                                    <input type="text" placeholder="Hora inicio" readonly id="horafin">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                        </div> 
+                                </li>
+                              </ul>
+                            </div>    
+                        </li> -->
+                          <!-- Calendario Fecha limite para tareas-->    
+                       <!-- <li id="fechalimite">
+                        <div class="content-block-title">Fecha Limite</div>
+                            <div class="list-block">
+                              <ul>
+                                <li>
+                                  <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                                    <div class="item-inner">
+                                      <div class="item-input">
+                                        <input type="text" placeholder="Selecciona la fecha limite" readonly id="calfechalimite">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div id="selechorafinlimite" class="content-block-title">Selecciona la hora de fin</div>
+                                    <div id="listblockhorafinlimite" class="list-block">
+                                      <ul>
+                                        <li>
+                                          <div class="item-content">
+                                            <div class="item-inner">
+                                              <div class="item-input">
+                                                <input type="text" placeholder="Hora fin limite" readonly id="horafinlimite">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div> 
+                                </li>
+                              </ul>
+                            </div>    
+                        </li>  --> 
+                          
+                        
+                        <li id="lugar">
+                          <div class="item-content">
+                            <div class="item-inner">
+                               <div class="item-title"></div>    
+                              <div class="item-input">
+                                <input id="autocomplete-dropdown" type="text" placeholder="Lugar">
+                              </div>
+                            </div>
+                          </div>
+                        </li>  
+                        <li>
+                          <div class="item-content">
+                                <div class="item-inner">
+                                   <div class="item-title"></div>    
+                                  <div class="item-input">
+                                    <input id="cajatags" type="text" placeholder="Tags">
+                                  </div>
+                                    <a id="butaceptar" href="#" class="button button-raised button-fill color-red">Agregar</a>
+                                </div>
+                          </div>       
+                                <div class="content-block-title"></div>
+                                <div id="contchips" class="content-block">
+                                    
+                                 <!-- <div id="chiptag" class="chip">
+                                    <div class="chip-label">Ejemplo Tag</div>
+                                    <a href="#" class="chip-delete"></a>
+                                  </div> 
+                                -->
+                              </div>
+                             
+                        </li>
+                        <div id="Prioridad">
+                        <div class="content-block-title">Prioridad:</div>  
+                         <div class="list-block">
+                          <ul>
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="radiopri" value="3">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"><img src="img/prioridadalta.png"></div>
+                                </div>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="radiopri" value="2">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"><img src="img/prioridadmedia.png"></div>
+                                </div>
+                              </label>
+                            </li> 
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="radiopri" value="1">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"><img src="img/prioridadbaja.png"></div>
+                                </div>
+                              </label>
+                            </li>  
+                            <li>
+                              <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="radiopri" value="0" checked="checked">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title"><img src="img/sinprioridad.png"></div>
+                                </div>
+                              </label>
+                              </li>  
+                          </ul>
+                        </div>   
+                        </div>  
+                        <!--<li id="Prioridad">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-prioridad"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Prioridad:</div>
+                              <div class="item-input">
+                                <select id="PrioridadEv">
+                                  <option value="0">Sin Prioridad</option>
+                                  <option value="1">Baja</option>
+                                  <option value="2">Media</option>
+                                  <option value="3">Alta</option>    
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </li>-->
+                        <li id="Estado">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-estado"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Estado:</div>
+                              <div class="item-input">
+                                <select id="EstadoEv">
+                                  <!--<option value="0">Pendiente</option>
+                                  <option value="1">En Proceso</option>-->
+                                  <option value="2">Terminado</option>  
+                                  <option value="3">Cancelado</option>       
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                         <li id="participantes">
+                            <div class="content-block-title">Agregar Participantes?</div> 
+                            <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label"></div>
+                              <div class="item-input">
+                                <label class="label-switch">
+                                  <input id="checkboxswitch" type="checkbox">
+                                  <div class="checkbox"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>  
+                        </li>
+                       <!-- smart select para los usuarios participantes-->   
+                       <li id="smartselectusers">
+                           <a href="#" class="item-link smart-select">
+                            <!-- "multiple" attribute for multiple select-->
+                            <select id="selectusuario" name="Usuarios" multiple>
+                                <optgroup id="optiongroup" label="Departamento">
+                                    
+                                </optgroup>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Usuarios</div>
+                              </div>
+                            </div>
+                           </a>    
+                      </li>
+                          
+                        <!-- <li>
+                          <a href="#" class="item-link smart-select">-->
+                        <!-- "multiple" attribute for multiple select-->
+                         <!-- options grouped within "optgroup" tag-->
+                        <!--<select id="selectautos" name="car" multiple>
+                         
+                          <optgroup label="Japanese">
+                            <option value="honda" selected>Honda</option>
+                            <option value="lexus">Lexus</option>
+                            <option value="mazda">Mazda</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="toyota">Toyota</option>
+                          </optgroup>-->
+                      <!--    
+                        </select>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">Car</div>
+                          </div>
+                        </div>
+                            </a>
+                        </li> -->
+                          
+                    </ul>
+                   </div>      
+           
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Path to Framework7 Library JS-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html> 

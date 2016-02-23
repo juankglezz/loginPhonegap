@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#1F06FF">
+    <!-- Your app title -->
+    <title>Admix Team</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/agregarreg.css"> 
+  </head>
+  <body>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view actualizarregistro">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="actualizarregistro" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"><a href="pags/Iniciotabs.html"><img src="img/ic_back.png"></a></div>
+                <div class="center">Actualizar Evento</div>  
+                <div class="right"><img id="imgsaveact" src="img/ic_save.png"></div>
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content Aqui va el contenido de la pag -->
+             <div id="#" class="page-content">
+             <div class="content-block-title">Formulario de Evento</div>
+                    <div class="list-block">
+                      <ul>
+                        <!-- Titulo inputs -->
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Titulo:</div>
+                              <div class="item-input">
+                                <input id="inputacttitulo" type="text" placeholder="El titulo">
+                              </div>
+                            </div>
+                          </div>       
+                        </li>
+                        <!-- Tarea radio input -->
+                        <li id="RadiobuttonTarea">
+                          <label class="label-radio item-content">
+                            <input id="radioacttarea" type="radio" name="my-radioact" value=1 checked="checked">
+                            <div class="item-media">
+                              <i class="icon icon-form-radio"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Tarea</div>
+                            </div>
+                          </label>
+                        </li>   
+                        <!-- RadioButton Cita seleccionada por default -->  
+                        <li id="RadiobuttonCita">
+                          <label class="label-radio item-content">
+                            <!-- Cita Checked by default -->
+                            <input id="radioactcita" type="radio" name="my-radioact" value=2 >
+                            <div class="item-media">
+                              <i class="icon icon-form-radio"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Cita</div>
+                            </div>
+                          </label>
+                        </li>
+                        <li id="smartselectclients">
+                           <div class="content-block-title">Desea Agregar una Cita con un  Cliente?</div> 
+                           <a href="#" class="item-link smart-select">
+                            <!-- "multiple" attribute for multiple select-->
+                            <select id="selectcliente" name="Clientes" multiple maxlength="1">
+                                <optgroup id="optiongroupclient" label="Clientes">
+                                    
+                                </optgroup>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Clientes</div>
+                              </div>
+                            </div>
+                           </a>    
+                        </li>  
+                        
+                        <!-- Proyecto radio input -->
+                        <!--<li>
+                          <label class="label-radio item-content">
+                            <input id="radioactproyecto" type="radio" name="my-radioact" value=3>
+                            <div class="item-media">
+                              <i class="icon icon-form-radio"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Proyecto</div>
+                            </div>
+                          </label>
+                        </li>  -->
+                        <!-- Notas inputs -->  
+                        <li id="actNotasI" class="align-top">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Notas</div>
+                              <div class="item-input">
+                                  <textarea id="actregNotasI"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li> 
+                        <!-- Notas Finales inputs -->  
+                        <li id="actNotasF" class="align-top">
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label">Notas Finales</div>
+                              <div class="item-input">
+                                  <textarea id="actregNotasF"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li id="actdiacompleto">
+                          <label class="label-checkbox item-content">
+                            <input  id="actcheckboxFullDay" type="checkbox" name="my-checkbox">
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="item-inner">
+                              <div class="item-title">Dia Completo</div>
+                            </div>
+                          </label>
+                       </li>
+                         <li id="actPicker-DepFI">
+                          <div class="content-block-title">Fecha Inicio:</div>
+                            <div class="list-block">
+                             <ul>
+                               <li>
+                                 <div class="item-content">
+                                   <div class="item-inner">
+                                     <div class="item-input">
+                                       <input type="text" placeholder="" readonly id="picker-actFI">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
+                             </ul>
+                            </div>
+                          </li>
+                          <li id="actPicker-DepFF">
+                          <div class="content-block-title">Fecha Fin:</div>
+                            <div class="list-block">
+                             <ul>
+                               <li>
+                                 <div class="item-content">
+                                   <div class="item-inner">
+                                     <div class="item-input">
+                                       <input type="text" placeholder="" readonly id="picker-actFF">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
+                             </ul>
+                            </div>
+                          </li >
+                          <li id="actPicker-DepFL">
+                          <div class="content-block-title">Fecha Limite:</div>
+                            <div class="list-block">
+                             <ul>
+                               <li>
+                                 <div class="item-content">
+                                   <div class="item-inner">
+                                     <div class="item-input">
+                                       <input type="text" placeholder="" readonly id="picker-actFL">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </li>
+                             </ul>
+                            </div>
+                          </li>  
+                        <li id="actlugar">
+                          <div class="item-content">
+                            <div class="item-inner">
+                               <div class="item-title">Lugar:</div>    
+                              <div class="item-input">
+                                <input id="actautocomplete-dropdown" type="text" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                        </li>  
+                        <li>
+                          <div class="item-content">
+                                <div class="item-inner">
+                                   <div class="item-title">Tags:</div>    
+                                  <div class="item-input">
+                                    <input id="actcajatags" type="text" placeholder="">
+                                  </div>
+                                    <a id="actbutaceptar" href="#" class="button button-raised button-fill color-teal">Agregar</a>
+                                </div>
+                          </div>       
+                                <div class="content-block-title">Tags</div>
+                                <div id="contchips" class="content-block">
+                                    
+                                 <!-- <div id="chiptag" class="chip">
+                                    <div class="chip-label">Ejemplo Tag</div>
+                                    <a href="#" class="chip-delete"></a>
+                                  </div> 
+                                -->
+                              </div>
+                             
+                        </li>
+                        <div id="actPrioridad">
+                        <div class="content-block-title">Prioridad:</div>  
+                         <div class="list-block">
+                          <ul>
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="actradiopri" value="3">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"><img src="img/prioridadalta.png"></div>
+                                </div>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="actradiopri" value="2">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"><img src="img/prioridadmedia.png"></div>
+                                </div>
+                              </label>
+                            </li> 
+                            <li>
+                              <label class="label-radio item-content">
+                                <input type="radio" name="actradiopri" value="1">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"><img src="img/prioridadbaja.png"></div>
+                                </div>
+                              </label>
+                            </li>  
+                            <li>
+                              <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="actradiopri" value="0" checked="checked">
+                                <div class="item-media">
+                                  <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title"><img src="img/sinprioridad.png"></div>
+                                </div>
+                              </label>
+                              </li>  
+                          </ul>
+                        </div>   
+                        </div>
+                        <li id="actEstado">
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-estado"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">Estado:</div>
+                              <div class="item-input">
+                                <select id="actEstadoEv">
+                                  <option value="0">Pendiente</option>
+                                  <option value="1">En Proceso</option>    
+                                  <option value="2">Cancelado</option>
+                                  <option value="3">Terminado</option>    
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </li> 
+                          <li id="participantes">
+                            <div class="content-block-title">Agregar Participantes?</div> 
+                            <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label"></div>
+                              <div class="item-input">
+                                <label class="label-switch">
+                                  <input id="checkboxswitch" type="checkbox">
+                                  <div class="checkbox"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>  
+                        </li>
+                       <!-- smart select para los usuarios participantes-->   
+                       <li id="smartselectusers">
+                           <a href="#" class="item-link smart-select">
+                            <!-- "multiple" attribute for multiple select-->
+                            <select id="selectusuario" name="Usuarios" multiple>
+                                <optgroup id="optiongroup" label="Departamento">
+                                    
+                                </optgroup>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Usuarios</div>
+                              </div>
+                            </div>
+                           </a>    
+                      </li>
+                    </ul>
+                   </div>      
+           
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Path to Framework7 Library JS-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html> 
