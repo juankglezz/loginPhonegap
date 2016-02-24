@@ -5915,7 +5915,7 @@ myApp.onPageInit('login', function(page) {
         document.getElementById('remember-me').checked = false;
       }
     } else {
-      myApp.alert("Tu Dipositivo no soporta almacenamiento local de variables");
+      myApp.alert("Tu Dipositivo no soporta almacenamiento local de variables","Advertencia");
     }
   });
 
@@ -5976,10 +5976,9 @@ if (typeof(Storage) !== "undefined") {
       error: function(responseError, msg, e) {
         var tempError = JSON.stringify(responseError);
         // console.log(tempError.responseText);
-        myApp.alert("Error, Introduzca las Credenciales Proporcionadas por su Proveedor de Admix");
+        myApp.alert("Introduzca las Credenciales Proporcionadas por su Proveedor de Admix","Error");
         myApp.hideIndicator();
       }
-
     });
 
     function onSuccessLogin(data) {
